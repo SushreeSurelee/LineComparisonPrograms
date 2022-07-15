@@ -31,6 +31,19 @@ namespace LineComparisonProblem
             double lengthOfLine = Math.Sqrt(XExp2 + YExp2);
             Console.WriteLine("Length of the line is " + lengthOfLine + " CM");
 
+
+            //bool checkLines = string.Equals(diffOfXCordinate, diffOfYCordinate);
+            bool checkLines = diffOfXCordinate.Equals(diffOfYCordinate);
+            if (checkLines)
+            {
+                Console.WriteLine("Lines are equal.");
+            }
+            else
+            {
+                Console.WriteLine("Lines are not equal.");
+            }
+
+
             Console.ReadLine();
 
         }
