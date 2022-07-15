@@ -31,10 +31,10 @@ namespace LineComparisonProblem
             Console.WriteLine("Enter the points of second cordinator");
             int x2 = Convert.ToInt32(Console.ReadLine());
             int y2 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("The cordicates of 1st line is ({0},{1}) ({2},{3})",x1,y1, x2, y2);
+            Console.WriteLine("The cordicates of 1st line is ({0},{1}) ({2},{3})\n",x1,y1, x2, y2);
 
             double lenghtOfLineOne = lengthOfLine(x1, x2, y1, y2);
-            Console.WriteLine("Length of the first line is " + lenghtOfLineOne + " CM");
+            Console.WriteLine("Length of the first line is " + lenghtOfLineOne + " CM\n");
 
             Console.WriteLine("Enter the poitns of third cordinator");
             int x3 = Convert.ToInt32(Console.ReadLine());
@@ -43,21 +43,36 @@ namespace LineComparisonProblem
             Console.WriteLine("Enter the points of fourth cordinator");
             int x4 = Convert.ToInt32(Console.ReadLine());
             int y4 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("The cordicates of 2st line is ({0},{1}) ({2},{3})", x3, y3, x4, y4);
+            Console.WriteLine("The cordicates of 2st line is ({0},{1}) ({2},{3})\n", x3, y3, x4, y4);
 
             double lengthOfLineTwo = lengthOfLine(x3, x4, y3, y4);
-            Console.WriteLine("Length of the second line is " + lengthOfLineTwo + " CM");
+            Console.WriteLine("Length of the second line is " + lengthOfLineTwo + " CM\n");
 
             bool checkLines = lenghtOfLineOne.Equals(lengthOfLineTwo);
             if (checkLines)
             {
-                Console.WriteLine("Lines are equal.");
+                Console.WriteLine("Lines are equal.\n");
             }
             else
             {
-                Console.WriteLine("Lines are not equal.");
+                Console.WriteLine("Lines are not equal.\n");
             }
 
+
+            int compare = lenghtOfLineOne.CompareTo(lengthOfLineTwo);
+
+            if(compare>0)
+            {
+                Console.WriteLine("Length of 1st line is greater than length of 2nd line. ");
+            }
+            else if(compare<0)
+            {
+                Console.WriteLine("Length of 1st line is smaller than length of 2nd line. ");
+            }
+            else
+            {
+                Console.WriteLine("Length of 1st line is equal to length of 2nd line. ");
+            }
 
             Console.ReadLine();
 
